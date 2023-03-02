@@ -7,6 +7,8 @@ from loguru import logger
 
 from config import BOT_TOKEN, USE_REDIS
 
+from handlers.private_chat import register_private_handlers
+
 
 def register_all_middlewares(dp: Dispatcher):
     pass
@@ -17,7 +19,7 @@ def register_all_filters(dp: Dispatcher):
     
     
 def register_all_handlers(dp: Dispatcher):
-    pass
+    register_private_handlers(dp)
 
 
 async def on_startup():
