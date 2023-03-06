@@ -2,14 +2,14 @@ from enum import Enum
 
 import aiohttp
 
-from tg_bot.config import ROOT_DJANGO_API
+from config import ROOT_DJANGO_API
 
 
 class AllowedMethods(Enum):
     GET: str = 'GET'
     POST: str = 'POST'
     PUT: str = 'PUT'
-    PATH: str = 'PATCH'
+    PATCH: str = 'PATCH'
     DELETE: str = 'DELETE'
 
 

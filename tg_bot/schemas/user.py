@@ -18,5 +18,9 @@ class OutUserSchema(UserSchemaBase):
     pass
 
 
+class UpdateUserSchema(OutUserSchema):
+    pass
+
+
 class ListUserSchema(BaseModel):
     users: List[OutUserSchema]
