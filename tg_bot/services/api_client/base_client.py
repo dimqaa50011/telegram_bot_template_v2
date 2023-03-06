@@ -22,7 +22,7 @@ class BaseApiClient:
         return await self._perform_request(method, curr_url, **kwargs)
 
     async def _get_current_url(self, path: str):
-        return '{}{}'.format(self.ROOT_URL, path.strip('/'))
+        return '{}{}'.format(self.ROOT_URL, path.lstrip('/'))
 
     async def _perform_request(self, method: AllowedMethods, url: str, **kwargs):
         async with aiohttp.ClientSession() as session:
