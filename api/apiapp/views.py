@@ -12,4 +12,4 @@ class ListTgUser(TgUserAPIMixin, ListAPIView):
 
 
 class ReadOrUpdateTgUser(TgUserAPIMixin, RetrieveUpdateAPIView):
-    pass
+    lookup_field = 'tg_id'
