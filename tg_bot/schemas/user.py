@@ -1,3 +1,5 @@
+from typing import List
+
 from pydantic import BaseModel, Field
 
 
@@ -14,3 +16,7 @@ class CreateUserSchema(UserSchemaBase):
 
 class OutUserSchema(UserSchemaBase):
     pass
+
+
+class ListUserSchema(BaseModel):
+    users: List[OutUserSchema]
